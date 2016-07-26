@@ -13,14 +13,14 @@ function res (result) {
   return result;
 }
 
-describe('PokemonAPI', function () {  
+describe('PokemonAPI', function () {
   var api;
 
   beforeEach(function () {
     api = new PokemonAPI();
   });
-  
-  xdescribe('.pokemon()', function () {
+
+  describe('.pokemon()', function () {
     it('throws an error if there is no parameter', function () {
       var expected = 'A Pokemon is required to use this method!';
       return api.pokemon().done().should.be.rejectedWith(expected);
